@@ -14,7 +14,7 @@ class NotaController extends Controller
      */
     public function index(Request $request)
     {
-        return Nota::where('user_id', auth()->id())->get();
+        // return Nota::where('user_id', auth()->id())->get();
 
         if($request->ajax()) {
             return Nota::where('user_id', auth()->id())->get();
